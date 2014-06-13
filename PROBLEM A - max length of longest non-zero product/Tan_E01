@@ -1,0 +1,42 @@
+//Excercise #1 Kathryn Tan
+#include <iostream>
+using namespace std;
+
+//function that determines the longest length of a substring of numbers whose product is non-zero
+void maxLength(int  input, int &counter, int &max) {
+     
+     //input=tc, counter=tmp(because of '&,' counter will later replace value of tmp), max= max (the same with counter but replaces the value of max 
+     
+     //determines the value of the current length of substring
+     
+     if (input != 0) { 
+        counter = counter++;
+     }else {
+        counter = 0;
+     }
+     
+     //comparison between max and counter, determines the longest length
+     if (max < counter){
+        max = counter;
+     }
+}
+
+int main () {
+    int n; // length of substring
+    int tc;//inputs from file
+    int max;// current maximum length
+    int tmp;// current length
+    
+    cin >> n; // gets the length of substring from file
+    
+    tmp = max = 0;//assigning of value 
+    
+    for (int i=0; i<n; i++) { // loop that terminates once i reaches n - 1 
+          
+          cin >> tc; //gets input from file 
+          
+          maxLength ( tc, tmp, max ); // calling of function and placing of arguments po
+    }
+    cout << max;
+    return 0;
+}
