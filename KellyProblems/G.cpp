@@ -48,7 +48,7 @@ int main(){
            if(k.length()>1){
              k2=k[1];
              
-             
+             pl+=k2;
              k2=k[0];
              carry=atoi(k2.c_str());
              carF='1';
